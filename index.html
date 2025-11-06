@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kaustubh Wagh — Site Reliability Engineer</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico?v=2">
+
+
+    <!-- Fonts & icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="logo"><span class="logo-mark">KW</span><span class="logo-text">Kaustubh
+                    Wagh</span></a>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container hero-inner" data-aos="fade-up">
+            <div class="hero-left">
+                <h1>Hi, I'm <span class="accent">Kaustubh Wagh</span></h1>
+                <p class="lead">Site Reliability Engineer · Observability · Cloud Infrastructure · Automation</p>
+                <p class="cta-row">
+                    <a class="btn primary" href="#contact">Get in Touch</a>
+                    <a class="btn outline" href="#projects">View Projects</a>
+                    <a class="btn outline" href="assets\docs\kaustubh_cv.pdf" target="_blank">View Resume</a>
+                </p>
+
+            </div>
+            <div class="hero-right" data-aos="fade-left">
+                <div class="card profile-card">
+                    <img src="assets/img/profile.jpg" alt="Kaustubh" class="profile-photo" />
+                    <div class="profile-info">
+                        <h3>Kaustubh Wagh</h3>
+                        <p class="muted">Site Reliability Engineer @ Jio Platforms Ltd</p>
+                        <div class="links">
+                            <a href="mailto:kaustubhwagh001@gmail.com">kaustubhwagh001@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/kaustubh-wagh-2a7302220" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <p class="section-lead">I’m a Site Reliability Engineer (SRE) with a passion for designing scalable,
+                observable, and self-healing infrastructure across hybrid and cloud environments. My core expertise
+                spans observability, AIOps, automation, and infrastructure reliability engineering — helping
+                organizations achieve end-to-end visibility and operational excellence.
+
+                I build and manage centralized observability platforms using Grafana, Prometheus, Loki, Tempo, and
+                Mimir, providing deep insights into distributed systems and microservices. I architect data-driven
+                dashboards, SLO/SLI frameworks, and proactive alerting systems to monitor performance, availability, and
+                latency across multiple applications and services.
+
+                Leveraging AIOps principles, I design and implement automated anomaly detection, capacity forecasting,
+                and trend analysis pipelines for large-scale server and service environments. This enables predictive
+                scaling, early incident detection, and intelligent decision-making for performance optimization and cost
+                management.
+
+                I drive Infrastructure as Code (IaC) and automation initiatives using Terraform, Ansible, and CI/CD
+                pipelines (Azure DevOps, Cloud Build, GitOps) to ensure consistency, repeatability, and fast deployments
+                across environments. These practices have significantly reduced manual intervention and operational risk
+                in production.
+
+                As part of resilience and disaster recovery planning, I have implemented RTO (Recovery Time Objective)
+                and RPO (Recovery Point Objective)-based backup and failover strategies for critical databases and
+                applications, ensuring business continuity even under large-scale failures.
+
+                My focus is on creating adaptive, autonomous, and intelligent infrastructure — where telemetry,
+                automation, and AIOps-driven insights work together to ensure high availability, optimized resource
+                utilization, and faster incident resolution at scale.</p>
+            <div class="two-cols">
+                <div>
+                    <h4>Core</h4>
+                    <ul class="simple">
+                        <li>Observability: Grafana, Prometheus, Loki, Tempo, Mimir</li>
+                        <li>Kubernetes / GKE, Helm, Istio, NGINX, ARGOCD, Ingress Controller</li>
+                        <li>Infrastructure as Code: Terraform, Ansible</li>
+                        <li>CI-CD: Azure Devops</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Cloud & Data</h4>
+                    <ul class="simple">
+                        <li>GCP, AWS, Azure</li>
+                        <li>Databases: PostgreSQL, MongoDB, My-SQL, Elasticsearch, Redis, ClickHouse</li>
+                        <li>Streaming: Kafka Strimzi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS + INFRA GRAPH -->
+    <section id="skills" class="section" data-aos="fade-up">
+        <div class="container skills-layout">
+            <!-- LEFT SIDE: Skills -->
+            <div class="skills-column">
+                <div class="skills-header">
+                    <h2 class="section-title">Skills</h2>
+                    <button id="toggleGraphBtn" class="btn outline small">Show Infra Graph</button>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill">Grafana</div>
+                    <div class="skill">Prometheus</div>
+                    <div class="skill">GCP / AWS / Azure</div>
+                    <div class="skill">Kubernetes</div>
+                    <div class="skill">Terraform</div>
+                    <div class="skill">Ansible</div>
+                    <div class="skill">Golang</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">Node.js</div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: Scrollable Graph (hidden by default) -->
+            <div class="graph-column" id="skillsGraphSection" style="display:none;">
+                <div class="graph-card card">
+                    <div class="graph-header">
+                        <button id="toggleGraphFullscreen" class="btn small" title="Expand Graph">⛶</button>
+                    </div>
+
+                    <!-- Scrollable area for large graph -->
+                    <div class="graph-canvas scrollable-graph">
+                        <svg id="depGraph" preserveAspectRatio="xMidYMid meet"></svg>
+                        <div id="gTooltip" class="tooltip" style="opacity:0;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Graph toggle script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('toggleGraphBtn');
+            const graphSection = document.getElementById('skillsGraphSection');
+
+            toggleBtn.addEventListener('click', () => {
+                const isVisible = graphSection.style.display !== 'none';
+                graphSection.style.display = isVisible ? 'none' : 'block';
+                toggleBtn.textContent = isVisible ? 'Show Infra Graph' : 'Hide Infra Graph';
+            });
+
+            // Optional fullscreen toggle
+            const fullBtn = document.getElementById('toggleGraphFullscreen');
+            fullBtn.addEventListener('click', () => {
+                document.querySelector('.graph-card').classList.toggle('fullscreen');
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollEl = document.querySelector('.scrollable-graph');
+            let isDown = false;
+            let startX, startY, scrollLeft, scrollTop;
+
+            scrollEl.addEventListener('mousedown', (e) => {
+                isDown = true;
+                scrollEl.classList.add('active');
+                startX = e.pageX - scrollEl.offsetLeft;
+                startY = e.pageY - scrollEl.offsetTop;
+                scrollLeft = scrollEl.scrollLeft;
+                scrollTop = scrollEl.scrollTop;
+            });
+
+            scrollEl.addEventListener('mouseleave', () => isDown = false);
+            scrollEl.addEventListener('mouseup', () => isDown = false);
+
+            scrollEl.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - scrollEl.offsetLeft;
+                const y = e.pageY - scrollEl.offsetTop;
+                const walkX = (x - startX);
+                const walkY = (y - startY);
+                scrollEl.scrollLeft = scrollLeft - walkX;
+                scrollEl.scrollTop = scrollTop - walkY;
+            });
+        });
+    </script>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="item">
+                    <div class="item-date">Oct 2023 – Present</div>
+                    <div class="item-body">
+                        <h3>Site Reliability Engineer — Jio Platforms Ltd</h3>
+                        <ul>
+                            <li>Designed observability across 100+ projects (Grafana, Prometheus, Loki, Tempo).</li>
+                            <li>Automated infrastructure with Terraform & Ansible — reduced ops overhead by ~30%.</li>
+                            <li>Built CI/CD pipelines with Azure DevOps and Cloud Build integrating security checks.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <h3>End-to-End Observability Platform</h3>
+                    <p>
+                        Designed and deployed a unified observability stack using <strong>Grafana Mimir</strong>
+                        (metrics),
+                        <strong>Loki</strong> (logs), and <strong>Tempo</strong> (traces) for multi-tenant Kubernetes
+                        clusters.
+                        Integrated <strong>OpenTelemetry agents</strong> and <strong>Grafana Alloy</strong> for
+                        consistent telemetry
+                        collection across Windows and Linux nodes.
+                    </p>
+                    <p>
+                        Built <strong>custom dashboards and alerting pipelines</strong> for application SLIs/SLOs,
+                        system health,
+                        and network performance. Developed <strong>automation scripts</strong> to onboard new tenants,
+                        configure alert rules, and manage environment rollouts via <strong>Ansible</strong> and
+                        <strong>Terraform</strong>.
+                    </p>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <h3>AIOps & Intelligent Monitoring</h3>
+                    <p>
+                        Implemented an <strong>AIOps framework</strong> for anomaly detection, capacity forecasting, and
+                        intelligent alert correlation using time-series data from Mimir and logs from Loki.
+                        Automated <strong>root-cause analysis workflows</strong> through metric-log-trace correlation
+                        and AI-driven pattern recognition.
+                    </p>
+                    <p>
+                        Deployed predictive <strong>capacity planning models</strong> for servers and clusters to
+                        optimize
+                        scaling and reduce false alert noise by over 40%. Enabled automated feedback loops
+                        between incident alerts and CI/CD pipelines to accelerate recovery.
+                    </p>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <h3>CI/CD & Infrastructure Automation</h3>
+                    <p>
+                        Built reusable CI/CD pipelines using <strong>Azure DevOps</strong> and <strong>Cloud
+                            Build</strong>
+                        for containerized workloads, integrating static code analysis and observability hooks.
+                        Automated infrastructure provisioning and configuration via <strong>Terraform</strong> and
+                        <strong>Ansible</strong>, ensuring version-controlled, repeatable deployments across
+                        <strong>GCP</strong>, <strong>AWS</strong>, and on-prem environments.
+                    </p>
+                    <p>
+                        Implemented <strong>policy-as-code</strong> and <strong>configuration drift detection</strong>
+                        to
+                        maintain compliance and minimize manual intervention in production environments.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-grid">
+
+                <div class="contact-card single-card">
+                    <h3>Reach out</h3>
+                    <p>
+                        Prefer email?
+                        <a href="mailto:kaustubhwagh001@gmail.com">kaustubhwagh001@gmail.com</a>
+                    </p>
+                    <p>Or send me a quick message below — I’ll get back to you soon!</p>
+                    <p class="muted">Messages go directly to my Google Form inbox.</p>
+
+                    <!-- Floating decorative image -->
+                    <div class="contact-image" data-aos="fade-up">
+                        <img src="assets/img/msg.png" alt="msg me" />
+                    </div>
+                </div>
+
+
+
+                <div class="form-card card">
+                    <form id="contactForm" class="custom-form">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="entry.411163360" placeholder="Your full name" required>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="entry.490217093" placeholder="your@email.com" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="entry.508863048" rows="5" placeholder="Write your message..."
+                            required></textarea>
+
+                        <button type="submit" class="btn primary">Send Message</button>
+                        <p id="form-status" class="muted"></p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            © <span id="year"></span> Kaustubh Wagh — Site Reliability Engineer · All rights reserved
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/graph.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/form.js"></script>
+
+    <script>
+        AOS.init({ once: true, duration: 700 });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
