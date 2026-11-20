@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Kaustubh Wagh — Site Reliability Engineer</title>
+    <title>Kaustubh Wagh — Observability Engineer</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico?v=2">
 
 
@@ -31,6 +31,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -41,11 +42,11 @@
         <div class="container hero-inner" data-aos="fade-up">
             <div class="hero-left">
                 <h1>Hi, I'm <span class="accent">Kaustubh Wagh</span></h1>
-                <p class="lead">Site Reliability Engineer · Observability · Cloud Infrastructure · Automation</p>
+                <p class="lead">Observability · Site Reliability · DevOps · Platform Engineering</p>
                 <p class="cta-row">
                     <a class="btn primary" href="#contact">Get in Touch</a>
                     <a class="btn outline" href="#projects">View Projects</a>
-                    <a class="btn outline" href="assets\docs\kaustubh_cv.pdf" target="_blank">View Resume</a>
+                    <a class="btn outline" href="assets/docs/kaustubh_cv.pdf" target="_blank">View Resume</a>
                 </p>
 
             </div>
@@ -69,56 +70,82 @@
     <section id="about" class="section alt" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">About</h2>
-            <p class="section-lead">I’m a Site Reliability Engineer (SRE) with a passion for designing scalable,
-                observable, and self-healing infrastructure across hybrid and cloud environments. My core expertise
-                spans observability, AIOps, automation, and infrastructure reliability engineering — helping
-                organizations achieve end-to-end visibility and operational excellence.
+            <p class="section-lead">I'm an observability engineer who also builds and runs the SRE, DevOps, and
+                platform engineering behind production systems: Kubernetes infrastructure, CI/CD, automation, and
+                the telemetry that ties it all together.
 
-                I implemented standrdised sre practices and tools which helps in achieveing better MTTR. Implemented
-                SRE/ARE based agent for better incident tracking and standrdised SOP and operational runbooks 
-                suggestions, whcih also helps in reducing the MTTR to achieve better SLO throughout the application.
+                At Jio Platforms, I built reusable CI/CD pipeline templates for 800+ microservices, migrated our
+                platform from self-managed Kubernetes to GKE using load testing and traffic shadowing, and
+                engineered the networking, load balancing, and security behind production traffic. I also owned a
+                multi-tenant observability platform serving 150+ organizations across 100+ Kubernetes clusters and
+                10,000+ servers, at 1.5M log events/sec, 1.3M metric samples/sec, and 60K trace spans/sec.
 
-                I build and manage centralized observability platforms using Grafana, Prometheus, Loki, Tempo, and
-                Mimir, providing deep insights into distributed systems and microservices. I architect data-driven
-                dashboards, SLO/SLI frameworks, and proactive alerting systems to monitor performance, availability, and
-                latency across multiple applications and services.
+                At Optym, I run production reliability for US-facing workloads on Azure. I cut on-call pages from
+                170+ to about 30 per shift, reduced MTTR from ~40 to ~25 minutes with runbooks and SOPs linked to
+                every alert, cut log ingestion by 60%, and defined SLOs based on customer SLAs.
 
-                Leveraging AIOps principles, I design and implement automated anomaly detection, capacity forecasting,
-                and trend analysis pipelines for large-scale server and service environments. This enables predictive
-                scaling, early incident detection, and intelligent decision-making for performance optimization and cost
-                management.
-
-                I drive Infrastructure as Code (IaC) and automation initiatives using Terraform, Ansible, and CI/CD
-                pipelines (Azure DevOps, Cloud Build, GitOps) to ensure consistency, repeatability, and fast deployments
-                across environments. These practices have significantly reduced manual intervention and operational risk
-                in production.
-
-                As part of resilience and disaster recovery planning, I have implemented RTO (Recovery Time Objective)
-                and RPO (Recovery Point Objective)-based backup and failover strategies for critical databases and
-                applications, ensuring business continuity even under large-scale failures.
-
-                My focus is on creating adaptive, autonomous, and intelligent infrastructure — where telemetry,
-                automation, and AIOps-driven insights work together to ensure high availability, optimized resource
-                utilization, and faster incident resolution at scale.</p>
+                I'm currently building agentic AI workflows for incident response, turning runbooks into automated
+                first-line investigation.</p>
             <div class="two-cols">
                 <div>
                     <h4>Core</h4>
                     <ul class="simple">
-                        <li>Observability: Datadog, Grafana, Prometheus, Loki, Tempo, Mimir</li>
-                        <li>Kubernetes / GKE, Helm, Istio, NGINX, ARGOCD, Ingress Controller</li>
-                        <li>Infrastructure as Code: Terraform, Ansible</li>
-                        <li>CI-CD: Azure Devops</li>
-                        <li>Incident Management: incident.io</li>
+                        <li>Kubernetes: GKE, AKS, Helm, Docker, Istio, NGINX Ingress, Argo CD (GitOps), Workload
+                            Identity</li>
+                        <li>CI/CD & IaC: Azure DevOps, Cloud Build, Terraform, Ansible, SonarQube, Black Duck</li>
+                        <li>Observability: OpenTelemetry, Datadog, Grafana, Prometheus, Mimir, Loki, Tempo,
+                            ClickHouse, SigNoz, HyperDX, Dynatrace</li>
+                        <li>Reliability: SLIs/SLOs/SLAs, error budgets, burn-rate alerting, incident.io, runbooks,
+                            SOPs, escalation policies, HA and multi-region DR</li>
+                        <li>Load testing: JMeter, Locust</li>
                     </ul>
                 </div>
                 <div>
                     <h4>Cloud & Data</h4>
                     <ul class="simple">
-                        <li>GCP, AWS, Azure</li>
-                        <li>Databases: PostgreSQL, MongoDB, My-SQL, Elasticsearch, Redis, ClickHouse</li>
-                        <li>Streaming: Kafka Strimzi, GCP pub/sub, Azure Servicebus/Eventhubs</li>
+                        <li>Azure: AKS, VMSS, Azure Monitor, VNets, Azure Front Door, Azure Application Gateway,
+                            Logic Apps, Azure Stream Analytics, Azure Data Factory, Storage Accounts, Azure SQL /
+                            Cosmos DB, Azure ML Workspaces, DR management, Active Directory, Workload Identity,
+                            Service Principals, Key Vault</li>
+                        <li>GCP: GKE, Compute Engine (VMs, instance templates), Cloud Run, Cloud Build, Load
+                            Balancing, Cloud Armor, Cloud CDN, Cloud DNS, VPC (peering, Private Service Connect),
+                            Subnets, Dataflow, Dataproc, Vertex AI, BigQuery, Bigtable, Cloud Spanner, Firestore,
+                            Cloud Storage, storage classes, App Engine, Cloud Functions, IAM</li>
+                        <li>AWS (learning): Lambda, EKS, ELB, Route 53, S3, RDS</li>
+                        <li>Databases (open-source and managed): PostgreSQL, MongoDB, MySQL, Redis, Cassandra,
+                            ScyllaDB, ClickHouse, Milvus, Elasticsearch</li>
+                        <li>Streaming: Kafka Strimzi, GCP Pub/Sub, Azure Service Bus / Event Hubs</li>
+                        <li>Linux: networking, DNS, iptables, kernel tuning, process and log management</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="what-i-do" class="section alt" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Observability</h3>
+                    <p>OpenTelemetry, Datadog, and the Grafana LGTM stack at scale.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Reliability</h3>
+                    <p>SLOs based on SLAs, error budgets, burn-rate alerting, incident management, on-call, alert
+                        noise and toil reduction, MTTR reduction.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Platform & Kubernetes</h3>
+                    <p>GKE and AKS clusters, Helm, Istio, NGINX Ingress, Workload Identity, networking, load
+                        balancing.</p>
+                </article>
+                <article class="project-card">
+                    <h3>CI/CD & Infrastructure as Code</h3>
+                    <p>Reusable pipeline templates, Azure DevOps, Cloud Build, Argo CD GitOps, Terraform, Ansible,
+                        security and quality gates.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -134,16 +161,18 @@
                 </div>
 
                 <div class="skills-grid">
-                    <div class="skill">Datadog</div>
-                    <div class="skill">Grafana</div>
-                    <div class="skill">Prometheus</div>
-                    <div class="skill">GCP / AWS / Azure</div>
                     <div class="skill">Kubernetes</div>
                     <div class="skill">Terraform</div>
                     <div class="skill">Ansible</div>
-                    <div class="skill">Golang</div>
+                    <div class="skill">Azure DevOps</div>
+                    <div class="skill">Argo CD</div>
+                    <div class="skill">Datadog</div>
+                    <div class="skill">OpenTelemetry</div>
+                    <div class="skill">Grafana</div>
+                    <div class="skill">Prometheus</div>
+                    <div class="skill">GCP / Azure / AWS</div>
                     <div class="skill">Python</div>
-                    <div class="skill">Node.js</div>
+                    <div class="skill">Golang</div>
                 </div>
             </div>
 
@@ -221,29 +250,72 @@
     <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="timeline">
-            
+
             <!-- Job 1 -->
             <div class="item">
-                <div class="item-date">Oct 2023 – Mar 2026</div>
+                <div class="item-date">Apr 2026 – Present</div>
                 <div class="item-body">
-                    <h3>Devops Engineer/Site Reliability Engineer — Jio Platforms Ltd</h3>
+                    <h3>Site Reliability Engineer — Optym</h3>
                     <ul>
-                        <li>Designed observability across 100+ projects (Grafana, Prometheus, Loki, Tempo).</li>
-                        <li>Automated infrastructure with Terraform & Ansible — reduced ops overhead by ~30%.</li>
-                        <li>Built CI/CD pipelines with Azure DevOps and Cloud Build integrating security checks.</li>
+                        <li>Cut on-call pages from 170+ to ~30 per 8-hour shift (82%) across 11 Datadog
+                            organizations by removing noisy monitors and fixing recurring alert causes; working
+                            toward 4–5 actionable pages per shift.</li>
+                        <li>Reduced MTTR from ~40 to ~25 minutes by attaching SOPs and runbooks to every alert,
+                            with historical incident context, common causes, and escalation paths via incident.io.
+                        </li>
+                        <li>Defined SLOs from customer SLA commitments (critical API error rates, failed requests,
+                            availability, synthetic test coverage) with error budgets and multi-window burn-rate
+                            alerts.</li>
+                        <li>Cut log ingestion by 60% by dropping Azure platform noise, INFO-level logs, unused
+                            services, and idle lower-environment logs.</li>
+                        <li>Run production for US-facing workloads on Azure/AKS: APM, RUM, synthetics, monitors,
+                            and dashboards, with alerts deployed as code via Terraform and automation via Datadog
+                            workflows.</li>
+                        <li>Explored Azure infrastructure end-to-end (VMSS, AKS, PostgreSQL, networking, Azure
+                            Monitor, Data Factory) to support an Azure-based partner integration feeding managed
+                            telemetry into Datadog, while pursuing Datadog certifications in APM/traces, SLOs,
+                            infrastructure monitoring, and incident management.</li>
+                        <li>Prototyped an agentic incident-response assistant (Ollama + Datadog MCP) that surfaces
+                            runbook-driven investigation steps directly from live alerts, cutting reliance on
+                            manual Datadog/Confluence lookups — see Projects.</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Job 2 -->
             <div class="item">
-                <div class="item-date">Apr 2026 – Present</div>
+                <div class="item-date">Oct 2023 – Mar 2026</div>
                 <div class="item-body">
-                    <h3>Site Reliability Engineer — Optym.com</h3>
+                    <h3>DevOps Engineer / Site Reliability Engineer — Jio Platforms Ltd</h3>
                     <ul>
-                        <li>Designed and implemented SRE practices across multiple business units (Datadog, Runbooks, SOPs, Incident Management).</li>
-                        <li>Implemented SRE tools and practices like synthetic monitoring, incident documentation, incident support, Escalation Metrics, and more.</li>
-                        <li>Worked on operational availability and reliability by achieving SLA/SLO targets via improved SLI instrumentation.</li>
+                        <li>Owned a multi-tenant observability platform (Grafana, Mimir, Loki, Tempo, Jaeger) on
+                            self-managed Kubernetes over GCP VMs, scaling to 150+ organizations across 100+
+                            clusters and 10,000+ servers at 1.5M log events/sec, 1.3M metric samples/sec, and 60K
+                            trace spans/sec.</li>
+                        <li>Built a white-labeled Grafana front end serving both internal Jio teams and our own
+                            JioCX customer platform as separate tenants, acting as the embedded observability
+                            contact for client dashboarding, alerting, and new data-source onboarding (including
+                            Milvus and storage-array integrations).</li>
+                        <li>Ran the Helm-deployed, NFS-backed observability stack through version upgrades and
+                            scrape-pipeline changes, troubleshooting across PromQL, LogQL, TraceQL, and KQL.</li>
+                        <li>Led an in-house observability evaluation: benchmarked Datadog, Coralogix, Dynatrace,
+                            SigNoz, and HyperDX, then reverse-engineered SigNoz's ClickHouse query patterns to
+                            design a multi-tenant OpenTelemetry + ClickHouse platform visualized natively in
+                            Grafana.</li>
+                        <li>Migrated telemetry collection from Prometheus/Grafana Agent to OpenTelemetry Collector
+                            (agent and gateway tiers) during the Grafana Agent to Alloy deprecation, across
+                            Kubernetes, database, and application scrape targets.</li>
+                        <li>Migrated the platform from self-managed Kubernetes to GKE, validating with JMeter and
+                            Locust load tests and production traffic shadowing; cut cost with spot instances for
+                            stateless workloads and dedicated node pools for stateful services, and resolved
+                            IP-masquerade and internal DNS resolution issues.</li>
+                        <li>Built reusable CI/CD pipeline templates in Azure DevOps and Cloud Build for 800+
+                            microservices with SonarQube and Black Duck gates and Argo CD GitOps to GKE, including
+                            the team's first production Argo CD rollout and its custom Helm chart.</li>
+                        <li>Stood up and tuned ScyllaDB, Elasticsearch, and MongoDB alongside Docker/Kubernetes for
+                            the CX platform, automated PostgreSQL backup/DR and load testing (JMeter, Locust,
+                            Selenium), and cut infrastructure cost ~30% through Terraform/Ansible-driven capacity
+                            planning and right-sizing.</li>
                     </ul>
                 </div>
             </div>
@@ -259,60 +331,119 @@
 
                 <!-- Project 1 -->
                 <article class="project-card">
-                    <h3>End-to-End Observability Platform</h3>
+                    <h3>Agentic L1 Incident Responder</h3>
                     <p>
-                        Designed and deployed a unified observability stack using <strong>Grafana Mimir</strong>
-                        (metrics),
-                        <strong>Loki</strong> (logs), and <strong>Tempo</strong> (traces) for multi-tenant Kubernetes
-                        clusters.
-                        Integrated <strong>OpenTelemetry agents</strong> and <strong>Grafana Alloy</strong> for
-                        consistent telemetry
-                        collection across Windows and Linux nodes.
+                        Built an agentic first-line incident responder combining the <strong>Datadog MCP
+                            server</strong> with a local <strong>Ollama</strong>-based LLM — issue-specific
+                        sub-agents pull telemetry and past-incident context, suggest runbook-driven remediation
+                        steps, and link findings to <strong>incident.io</strong>, cutting manual triage toil
+                        without the latency of native Datadog/Confluence agent options.
                     </p>
-                    <p>
-                        Built <strong>custom dashboards and alerting pipelines</strong> for application SLIs/SLOs,
-                        system health,
-                        and network performance. Developed <strong>automation scripts</strong> to onboard new tenants,
-                        configure alert rules, and manage environment rollouts via <strong>Ansible</strong> and
-                        <strong>Terraform</strong>.
-                    </p>
+                    <!-- GitHub: TODO - add repo URL -->
                 </article>
 
                 <!-- Project 2 -->
                 <article class="project-card">
-                    <h3>AIOps & Intelligent Monitoring</h3>
+                    <h3>CI/CD Platform for 800+ Microservices</h3>
                     <p>
-                        Implemented an <strong>AIOps framework</strong> for anomaly detection, capacity forecasting, and
-                        intelligent alert correlation using time-series data from Mimir and logs from Loki.
-                        Automated <strong>root-cause analysis workflows</strong> through metric-log-trace correlation
-                        and AI-driven pattern recognition.
+                        Reusable pipeline templates in <strong>Azure DevOps</strong> and <strong>Cloud Build</strong>
+                        with <strong>SonarQube</strong> and <strong>Black Duck</strong> gates, <strong>Argo
+                            CD</strong> GitOps deployments to <strong>GKE</strong>, and infrastructure provisioned
+                        with <strong>Terraform</strong> and <strong>Ansible</strong> across <strong>GCP</strong>,
+                        <strong>AWS</strong>, and on-prem environments.
                     </p>
                     <p>
-                        Deployed predictive <strong>capacity planning models</strong> for servers and clusters to
-                        optimize
-                        scaling and reduce false alert noise by over 40%. Enabled automated feedback loops
-                        between incident alerts and CI/CD pipelines to accelerate recovery.
+                        Implemented <strong>policy-as-code</strong> and <strong>configuration drift detection</strong>
+                        to maintain compliance and minimize manual intervention in production environments.
                     </p>
                 </article>
 
                 <!-- Project 3 -->
                 <article class="project-card">
-                    <h3>CI/CD & Infrastructure Automation</h3>
+                    <h3>GKE Migration with Traffic Shadowing</h3>
                     <p>
-                        Built reusable CI/CD pipelines using <strong>Azure DevOps</strong> and <strong>Cloud
-                            Build</strong>
-                        for containerized workloads, integrating static code analysis and observability hooks.
-                        Automated infrastructure provisioning and configuration via <strong>Terraform</strong> and
-                        <strong>Ansible</strong>, ensuring version-controlled, repeatable deployments across
-                        <strong>GCP</strong>, <strong>AWS</strong>, and on-prem environments.
+                        Moved the platform from self-managed VM-based Kubernetes to <strong>GKE</strong>: validated
+                        capacity with <strong>JMeter</strong> and <strong>Locust</strong> load tests, then compared
+                        real production traffic against the new cluster via shadowing before cutover. Used spot
+                        instances for stateless workloads and dedicated node pools for stateful services to
+                        control cost, and resolved IP-masquerade and internal DNS resolution issues introduced by
+                        the move.
+                    </p>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <h3>OpenTelemetry + ClickHouse Observability Platform</h3>
+                    <p>
+                        Led a POC benchmarking <strong>Datadog</strong>, <strong>Dynatrace</strong>,
+                        <strong>SigNoz</strong>, and <strong>HyperDX</strong>, then designed an in-house platform
+                        with <strong>OpenTelemetry Collector</strong> pipelines (agent/gateway), custom
+                        <strong>ClickHouse</strong> schemas, and custom dashboards.
+                    </p>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <h3>End-to-End Observability Platform</h3>
+                    <p>
+                        Built a white-labeled Grafana front end over a multi-tenant <strong>LGTM stack</strong>
+                        (Grafana, Mimir, Loki, Tempo) with <strong>OpenTelemetry</strong> collection and
+                        <strong>Grafana Alloy</strong> for consistent telemetry across Windows and Linux nodes,
+                        serving 150+ organizations — including our own JioCX customer platform — at 1.5M log
+                        events/sec.
                     </p>
                     <p>
-                        Implemented <strong>policy-as-code</strong> and <strong>configuration drift detection</strong>
-                        to
-                        maintain compliance and minimize manual intervention in production environments.
+                        Built <strong>SLO-based alerting</strong>, automated tenant onboarding via
+                        <strong>Ansible</strong> and <strong>Terraform</strong>, and custom scrapers for databases
+                        without good exporters.
+                    </p>
+                    <!-- GitHub (scrapers and configs): TODO - add repo URL -->
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <h3>AIOps Anomaly Detection & Forecasting</h3>
+                    <p>
+                        Pipeline extracting metrics from <strong>Mimir</strong> into an NFS-backed data lake and
+                        <strong>PostgreSQL</strong>, with <strong>XGBoost</strong> and <strong>SARIMA</strong>
+                        models for anomaly detection and capacity forecasting on Ansible-provisioned CPU/GPU
+                        infrastructure.
+                    </p>
+                    <p>
+                        Deployed predictive capacity planning models for servers and clusters to optimize scaling
+                        and reduce false alert noise by over 40%. Enabled automated feedback loops between
+                        incident alerts and CI/CD pipelines to accelerate recovery.
                     </p>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section alt" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Google Cloud Certified Professional Cloud Architect</h3>
+                    <p>
+                        <a href="https://www.credly.com/badges/1169e4de-b0e5-4687-ba14-b5a3288e7de2/public_url"
+                            target="_blank">View credential</a>
+                    </p>
+                </article>
+            </div>
+            <div class="certs-more" style="margin-top:18px;">
+                <button id="toggleOtherCerts" class="btn outline small">Other Certifications</button>
+                <div id="otherCertsList" class="projects-grid" style="display:none; margin-top:14px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Community</h2>
+            <p class="section-lead">Attended Datadog Live Mumbai and shared my learnings on LinkedIn.</p>
         </div>
     </section>
 
@@ -374,6 +505,7 @@
     <script src="assets/js/graph.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/form.js"></script>
+    <script src="assets/js/other-certs.js"></script>
 
     <script>
         AOS.init({ once: true, duration: 700 });
